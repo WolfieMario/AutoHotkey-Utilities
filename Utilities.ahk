@@ -6,9 +6,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; ----- Variables and Settings -----
 
 #NoTrayIcon
-showInTray := false
+global showInTray := false
 
-AhkDir := "C:\Program Files\AutoHotkey"
+global AhkDir := SubStr(A_AhkPath, 1, -StrLen("\AutoHotkey.exe"))
+
+;global python27Dir := "C:\Python27"
+global python27Dir := "C:\Python\Python27"
 
 ; Used for Key History
 #InstallKeybdHook
@@ -58,6 +61,7 @@ showUtilitiesMenu()
 {	
 	originalWidth := GuiSizes.columnWidth
 	Gui Utilities:New, +LastFound, Utilities
+	Gui Utilities:Default
 	
 	startColumn("Run Programs", 200)
 	addButton("Firefox, Notepad++, Winamp, Skype", "RunGeneral")
@@ -150,7 +154,7 @@ RunPython:
 	Run cmd /K "python", %A_Desktop%
 Return
 RunPython27:
-	Run cmd /K "C:\Python27\python.exe", %A_Desktop%
+	Run cmd /K "%python27Dir%\python.exe", %A_Desktop%
 Return
 
 RunFlux:
@@ -202,4 +206,7 @@ Return
 
 ; ----- Hotkeys -----
 
-Browser_Favorites:: showUtilitiesMenu()
+;Browser_Favorites::
+Browser_Home::
+	showUtilitiesMenu()
+Return
