@@ -102,7 +102,7 @@ UpperGreekHotkey:
 
 !+,:: Send ≤  ; Less Than or Equal To       Alt <
 !+.:: Send ≥  ; Greater Than or Equal To    Alt >
-!=::  Send ≠  ; Not Equal                   Alt =
+;!=::  Send ≠  ; Not Equal                   Alt =
 ^!=:: Send ≈  ; Almost Equal To        Ctrl Alt =
 !+=:: Send ±  ; Plus or Minus               Alt +
 !+8:: Send ×  ; Multiplication              Alt *
@@ -129,5 +129,11 @@ UpperGreekHotkey:
 !Down::   Send ↓  ; Down Arrow              Alt Down
 !+Left::  Send ⇐  ; Left Double Arrow       Alt Shift Left
 !+Up::    Send ⇑  ; Up Double Arrow         Alt Shift Up
-!+Right:: Send ⇒ ; Right Double Arrow      Alt Shift Right 
+!+Right:: Send ⇒ ; Right Double Arrow      Alt Shift Right
 !+Down::  Send ⇓  ; Down Double Arrow       Alt Shift Down
+
+; Just for convenience to avoid triggering window menu:
+!Space::  Send {Right}{Space}
+!Enter::  Send {Right}{Enter}
+;TODO remove {Right}? Mode
+; Make ∉ use ctrl, ∋ use shift
