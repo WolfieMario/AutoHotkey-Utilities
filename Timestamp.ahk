@@ -300,7 +300,7 @@ Return
 ; Type the current time or date in various formats.
 !T:: Send % currentTime("Time") ; Example: 9:07 AM
 ^!T:: Send % currentTime("ShortDate") ; Example: 1/30/2016
-+!T:: Send % currentTime("d-M-yy") ; Useful for filenames. Example: 1-30-16
++!T:: Send % currentTime("M-d-yy") ; Useful for filenames. Example: 1-30-16
 ^+!T:: Send % currentTime("LongDate") ; Example: Saturday, January 30, 2016
 
 ; Timer Timestamps:
@@ -327,6 +327,6 @@ Return
 ^+!R::
 	Clipboard := ""
 	Send ^c
-	ClipWait 5
+	ClipWait 1
 	Clipboard := timeArithmetic(Clipboard, arithmeticTimer, arithmeticTooltips)
 Return
