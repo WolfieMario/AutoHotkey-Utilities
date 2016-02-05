@@ -1,8 +1,9 @@
 ﻿; Simple numpad-emulating script by Gerrard Lukacs. Useful for using Blender without a numpad.
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-#Warn  ; Recommended for catching common errors.
+; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 AppsKey & 1:: Send {Blind}{Numpad1}
 AppsKey & 2:: Send {Blind}{Numpad2}
