@@ -73,7 +73,7 @@ showUtilitiesMenu()
 	pythonButtonStyle .= " x+" GuiSizes.horizontalPad
 	Gui Add, Button, %pythonButtonStyle% gRunPython27, Python 2.7.9
 	; End row
-	addButton("SourceTree, Unity, MonoDevelop, Flux", "RunFlux", "xm")
+	addButton("SourceTree, Unity, MonoDevelop", "RunUnity", "xm")
 	
 	startColumn("AutoHotkey Scripts", 120)
 	addScriptButton("MultiClipboard")
@@ -157,11 +157,10 @@ RunPython27:
 	Run cmd /K "%python27Dir%\python.exe", %A_Desktop%
 Return
 
-RunFlux:
+RunUnity:
 	runProgram("C:\Program Files (x86)\Atlassian\SourceTree", "SourceTree.exe", true)
 	runProgram("C:\Program Files\Unity\Editor", "Unity.exe", true)
 	runProgram("C:\Program Files\Unity\MonoDevelop\bin", "MonoDevelop.exe", true)
-	openFolder(A_MyDocuments "\Gerrard\My Games\Flux")
 Return
 
 
