@@ -4,20 +4,20 @@
 #Warn  ; Recommended for catching common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 
-AppsKey & 1:: Send {Numpad1}
-AppsKey & 2:: Send {Numpad2}
-AppsKey & 3:: Send {Numpad3}
-AppsKey & 4:: Send {Numpad4}
-AppsKey & 5:: Send {Numpad5}
-AppsKey & 6:: Send {Numpad6}
-AppsKey & 7:: Send {Numpad7}
-AppsKey & 8:: Send {Numpad8}
-AppsKey & 9:: Send {Numpad9}
-AppsKey & 0:: Send {Numpad0}
+AppsKey & 1:: Send {Blind}{Numpad1}
+AppsKey & 2:: Send {Blind}{Numpad2}
+AppsKey & 3:: Send {Blind}{Numpad3}
+AppsKey & 4:: Send {Blind}{Numpad4}
+AppsKey & 5:: Send {Blind}{Numpad5}
+AppsKey & 6:: Send {Blind}{Numpad6}
+AppsKey & 7:: Send {Blind}{Numpad7}
+AppsKey & 8:: Send {Blind}{Numpad8}
+AppsKey & 9:: Send {Blind}{Numpad9}
+AppsKey & 0:: Send {Blind}{Numpad0}
 
-AppsKey & .:: Send {NumpadDot}
-AppsKey & /:: Send {NumPadDiv}
-AppsKey & ,:: Send {NumPadMult}
-AppsKey & +:: Send {NumPadAdd}
-AppsKey & -:: Send {NumPadSub}
-AppsKey & Enter:: Send {NumPadEnter}
+AppsKey & .:: Send {Blind}{NumpadDot}
+AppsKey & /:: Send {Blind}{NumPadDiv}
+AppsKey & ,:: Send {Blind}{NumPadMult}
+AppsKey & +:: Send {Blind}{NumPadAdd}
+AppsKey & -:: Send {Blind}{NumPadSub}
+AppsKey & Enter:: Send {Blind}{NumPadEnter}
