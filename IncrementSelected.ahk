@@ -9,13 +9,39 @@ global increment := 1
 
 ^SC029::
 	clipbrdBackup := ClipboardAll ; Save clipboard
-	Send, ^c
+	Clipboard =
+	Send, ^x
 	ClipWait, 1 ; Wait for clipboard data
 	Sleep 100
 	
 	global increment
-	incremented := Clipboard + increment
-	SendInput %incremented%
+	
+	clipStr := Clipboard
+	start := 1
+	index := 1
+	result := ""
+	
+	while (index > 0)
+	{
+		index := RegExMatch(clipStr, "[0-9]+", numberStr, start)
+		
+		if (index > 0)
+		{
+			result .= SubStr(clipStr, start, index - start)
+			result .= numberStr + increment
+			start := index + StrLen(numberStr)
+		}
+	}
+	result .= SubStr(clipStr, start, StrLen(clipStr) - start + 1)
+	
+	;Send % "{Raw}" . result
+	
+	ClipBoard := result
+	SendInput ^v
+	Sleep 1000
+	Clipboard =
+	SendInput ^c
+	ClipWait, 1 ; Wait for clipboard data
 	
 	ClipBoard := clipbrdBackup ; Restore clipboard
 	Return
