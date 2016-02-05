@@ -94,6 +94,7 @@ UpperGreekHotkey:
 ^!+s::Send ∑  ; Summation              Ctrl Alt S
 ^!r:: Send √  ; Square Root            Ctrl Alt r
 ^!i:: Send ∫  ; Integral               Ctrl Alt i
+^!q:: Send ∎  ; End of Proof           Ctrl Alt q
 !8::  Send ∞  ; Infinity                    Alt 8
 !0::  Send Ø  ; Empty Set*                  Alt 0
               ; *This is actually Capital O with Stroke, because the
@@ -102,14 +103,17 @@ UpperGreekHotkey:
 !+,:: Send ≤  ; Less Than or Equal To       Alt <
 !+.:: Send ≥  ; Greater Than or Equal To    Alt >
 !=::  Send ≠  ; Not Equal                   Alt =
+^!=:: Send ≈  ; Almost Equal To        Ctrl Alt =
 !+=:: Send ±  ; Plus or Minus               Alt +
 !+8:: Send ×  ; Multiplication              Alt *
 !/::  Send ÷  ; Division                    Alt /
 !.::  Send ∙  ; Bullet Operator             Alt .
 !-::  Send ‾  ; Overline                    Alt -
 
-!3::  Send ∈ ; Element of                  Alt 3
+!3::  Send ∈ ; Element Of                  Alt 3
 ^!3:: Send ∋ ; Contains as Member     Ctrl Alt 3
+!+3:: Send ∉  ; Not Element Of              Alt #
+^!+3::Send ∌  ; Does Not Contain       Ctrl Alt #
 !+9:: Send ⊂ ; Subset                      Alt (
 !+0:: Send ⊃ ; Superset                    Alt )
 ^!+9::Send ⊆ ; Subset or Equal To     Ctrl Alt (
@@ -118,3 +122,12 @@ UpperGreekHotkey:
 ^!+u::Send ∩  ; Intersection           Ctrl Alt U
 ^!v:: Send ∨ ; Disjunction            Ctrl Alt v
 !+6:: Send ∧ ; Conjunction                 Alt ^
+
+!Left::   Send ←  ; Left Arrow              Alt Left
+!Up::     Send ↑  ; Up Arrow                Alt Up
+!Right::  Send →  ; Right Arrow             Alt Right
+!Down::   Send ↓  ; Down Arrow              Alt Down
+!+Left::  Send ⇐  ; Left Double Arrow       Alt Shift Left
+!+Up::    Send ⇑  ; Up Double Arrow         Alt Shift Up
+!+Right:: Send ⇒ ; Right Double Arrow      Alt Shift Right 
+!+Down::  Send ⇓  ; Down Double Arrow       Alt Shift Down
